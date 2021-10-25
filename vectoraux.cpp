@@ -22,11 +22,11 @@ template <typename T>
 void removeDup(std::vector<T> & v)
 {
 //Use Iterator to set pointer to certain spots and use them to delete duplicates.
-std::vector<T>:: iterator y;
-std::vector<T>:: iterator j;
+
+typename std::vector<T>::iterator y,j;
 
 for(y = v.begin(); y < v.end(); y++){
-  for(j = y+1; j < v.end(); j++){
+  for(j = y++; j < v.end(); j++){
     if(y == j){
       v.erase(j);
     }
